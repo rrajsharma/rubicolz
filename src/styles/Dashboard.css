@@ -1,0 +1,138 @@
+
+.dashboard-container {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  padding: 10px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo span {
+  color: #ffcc00;
+  font-weight: 900;
+}
+.logo-icon {
+  width: 40px; /* Adjust size */
+  height: 40px;
+  margin-right: 10px;
+}
+.notification-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.banner {
+  background: #00467F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.dashboard-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.dashboard-button {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.deposit {
+  background: linear-gradient(45deg, #789641, #3a3735);
+}
+
+.withdraw {
+  background: linear-gradient(45deg, #9ba544, #464d47);
+}
+
+.dashboard-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.wallet-section {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.menu-options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.wheel, .vip {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.category-nav {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.lottery-section {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.lottery-games {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.game {
+  background: #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 80px;
+}
