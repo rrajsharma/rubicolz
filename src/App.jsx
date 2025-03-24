@@ -1,25 +1,50 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import Home from "./components/home.jsx";
-import Login from "./pages/login.jsx";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Home from "./components/Home";
+import Dashboard from "./pages/Dashboard";
+import Promotion from "./pages/Promotion";
+import Activity from "./pages/Activity";
+import Wallet from "./pages/Wallet";
+import Account from "./pages/Account";
 import Register from "./pages/register.jsx";
-import Dashboard from "./components/Dashboard.jsx"; // Correct
+import Login from "./pages/login.jsx";
+import Navbar from "./components/Navbar";
 
+// Function to protect routes
+const ProtectedRoute = ({ element }) => {
+  const user = JSON.parse(localStorage.getItem("loggedInUser"));
+  return user ? element : <Navigate to="/login" />;
+};
 
-const App = () => {
+function App() {
   return (
-    <>
-      <ToastContainer />
+    <div className="app-container">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
 
+        {/* Dashboard with Navbar */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute element={
+              <>
+                <Navbar />
+                <Dashboard />
+              </>
+            } />
+          }
+        />
+
+        {/* Other pages */}
+        <Route path="/promotion" element={<ProtectedRoute element={<Promotion />} />} />
+        <Route path="/activity" element={<ProtectedRoute element={<Activity />} />} />
+        <Route path="/wallet" element={<ProtectedRoute element={<Wallet />} />} />
+        <Route path="/account" element={<ProtectedRoute element={<Account />} />} />
       </Routes>
-    </>
+    </div>
   );
-};
+}
 
 export default App;

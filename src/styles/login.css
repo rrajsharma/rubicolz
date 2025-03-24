@@ -1,10 +1,10 @@
-/* Common styles for both Register & Login pages */
+/* Common styles for authentication pages */
 .auth-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, #667eea, #764ba2); /* Gradient Background */
+  background: linear-gradient(to right, #667eea, #764ba2);
 }
 
 .auth-box {
@@ -29,6 +29,7 @@
   margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #ccc;
+  font-size: 16px;
 }
 
 .auth-button {
@@ -40,10 +41,16 @@
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
+  transition: background 0.3s ease-in-out;
 }
 
 .auth-button:hover {
   background: #0056b3;
+}
+
+.auth-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
 
 .auth-footer {
